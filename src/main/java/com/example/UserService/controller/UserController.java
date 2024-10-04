@@ -29,7 +29,7 @@ public class UserController {
         return ResponseEntity.ok(response);
     }
 
-    @RequestMapping(name = "/api/v1/save/user")
+    @RequestMapping(name = "/api/v1/update/user")
     public ResponseEntity<UserServiceResponse> updateUserDetails(@RequestBody UpdateUserRequest updateUserRequest) {
         log.debug("update user request received : {}", updateUserRequest);
         UserServiceResponse response = userService.update(updateUserRequest);
